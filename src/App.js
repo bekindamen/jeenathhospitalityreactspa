@@ -52,7 +52,7 @@ this.fetchImages()
           <InfoCard
           cards={ this.state.data  }
         />
-        </div>}/>  
+        </div>}/>   
         <Route path="/aboutus" element={<div>
            <AboutUs/>
         </div>}/> 
