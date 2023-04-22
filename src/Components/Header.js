@@ -1,20 +1,17 @@
 import { Container, Navbar, Nav, Form, FormControl, Button, NavLink } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/Header.css'
-import logoPNG from '../res/My_project-1__1_-removebg-preview.png'
+import logoPNG from '../res/logo.png'
 
-
-export default function Header(){
-
-   
-
+export default function Header(props){
+var {setmodal} = props
     return(
         <Navbar bg='info'  expand="lg"  >
       <Container>
-        <Navbar.Brand href="#" >
-          <img
+        <Navbar.Brand href="/" >
+          <img 
             src={logoPNG}
-            style={{maxWidth:'100px', borderRadius:'2px'}}
+            style={{ maxWidth:'90px',  borderRadius:'2px'}}
             className="d-inline-block align-top"
             alt="Logo"
           />
@@ -25,7 +22,7 @@ export default function Header(){
             <NavLink href='/'>Home</NavLink>
             <NavLink href='/contactus'>Contact Us</NavLink>
             <NavLink href='/aboutus'>About Us</NavLink>
-            <NavLink href='/bookasample'>Book A Sample</NavLink>
+            <NavLink variant="primary" onClick={() =>  setmodal(true)}>Book A Sample</NavLink>
           </Nav> 
           <Form className="d-flex">
             <FormControl

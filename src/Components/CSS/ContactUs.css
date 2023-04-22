@@ -1,0 +1,38 @@
+.contact-container {
+    margin-top: 70px;
+  }
+ 
+  
+  .contact-form {
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 30px;
+  }
+  
+  .contact-form Form {
+    width: 100%;
+  }
+  
+  .contact-form Form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form Form .form-control {
+    border-radius: 0;
+  }
+  
+  .contact-form Form .form-control:focus {
+    box-shadow: none;
+  }
+  
+  .contact-form Form textarea.form-control {
+    resize: none;
+  }
+  
