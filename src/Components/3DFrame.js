@@ -16,6 +16,11 @@ export default function TFrame() {
         console.log(err)
     })
 
+
+    const light = new THREE.DirectionalLight(0xffffff, 1)
+    light.position.set(2,2,5)
+    scene.add(light)
+
  
 
     const sizes ={
@@ -35,8 +40,16 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.shadowMap.enabled = true
 renderer.outputEncoding = true
-renderer.render(scene, camera)})
-  
+
+function animate (){
+    requestAnimationFrame(animate)
+    renderer.render(scene, camera)
+}
+animate()
+})
+
+
+
   return (
    <canvas className="webgl">
 
